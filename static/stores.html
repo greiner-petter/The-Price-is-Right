@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" class="main-html">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+
+    <title>The Price Is Right</title>
+    <script src="js/api.js"></script>
+</head>
+
+<body>
+    <header>
+        <div id="nav-container">
+            <!--Zum Bearbeiten nav.html benutzen-->
+        </div>
+        <a href="#top" class="upButton" id="upButton"><img src="img/arrow-icon-up.png"></a>
+    </header>
+    <main>
+        <section class="overview" id="overview">
+            <h2 id="top">Stores Overview</h2>
+            <div class="overview-option" style="margin-bottom: 25px;">
+                <form id="search-Overview" action="" onsubmit="return false">
+                    <input id="search-input-Overview" type="search" placeholder="Search here ...">
+                    <i id="search-img-Overview">
+                        <img src="img/magnifyingglass.svg" alt="search">
+                    </i>
+                    <i id="search-trash-Overview">
+                        <img id="trash-icon" src="img/trash.png" alt="Trash">
+                    </i>
+                </form>
+            </div>
+            <div class="overview-inner" id="overview-inner">
+
+            </div>
+        </section>
+        <dialog id="infoWrapper">
+            <div id="infoBlur">
+            </div>
+            <div id="infoDialog">
+                <div id="closeinfoButton">
+                    <img src="img/xmark.circle.fill.svg" alt="x">
+                </div>
+
+            </div>
+        </dialog>
+    </main>
+    <div id="newItemContainer">
+        <!-- Zum Bearbeiten addNewItem.html benutzen -->
+    </div>
+    <script src="js/nav.js"></script>
+    <script src="js/addNewItem.js"></script>
+    <script src="js/stores/stores-overview.js"></script>
+    <script src="js/stores/search-for-stores.js"></script>
+</body>
+
+</html>

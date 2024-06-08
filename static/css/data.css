@@ -1,0 +1,102 @@
+
+.overview-card-container.kassenbon {
+    background-image: url("../img/kassenbon.jpg") !important;
+}
+
+/* data dialog */
+
+#dataWrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: transparent;
+    border: none;
+}
+#dataBlur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    background-color: rgba(20, 20, 20, 0.8);
+}
+#dataDialog {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 350px;
+    width: 70vw;
+    height: 90%;
+    padding: 25px;
+    background-color: aliceblue;
+    border-radius: 16px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    color: var(--text);
+}
+#dataForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+    height: 90%;
+}
+#dataContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#dataDialog p {
+    margin: 5px 0;
+}
+
+#closedataButton {
+    position: absolute;
+    top: 25px;
+    align-self: end;
+    height: fit-content;
+    width: fit-content;
+    cursor: pointer;
+}
+#dataDialog h4 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    color: black;
+}
+#dataDialog * {
+    color: black;
+}
+
+#dataText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.entryContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.entryContainer p {
+    margin: 5px;
+}
+
+.removedataButton {
+    align-self: center;
+    height: fit-content;
+    width: fit-content;
+    cursor: pointer;
+}

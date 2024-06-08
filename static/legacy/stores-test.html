@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script type="text/javascript" src="js/api.js"></script>  
+    <title>Stores Übersicht</title>
+</head>
+<body>
+    <p style="color:azure">Folgende Stores wurden dynamisch aus der API entnommen ('http://trawl-fki.ostfalia.de/api/store/find?name=%25&page=0&size=100')</p>
+    <ul id="list">
+
+    </ul>
+    <p style="color:azure">Folgendes Item wurde dynamisch aus der API entnommen ('http://trawl-fki.ostfalia.de/api/item/find?name=TELATE%20Apfelsaft%20%5B500%20ML%5D')</p>
+   
+</body>
+<script>
+    "use strict";
+
+    function createTableEntry(store) {
+        let ul = document.querySelector('#list');
+        let item = document.createElement('li');
+        ul.appendChild(item);
+        item.innerHTML = store.id;
+        item.style.color = 'azure';
+    }
+
+    document.addEventListener('DOMContentLoaded', async (event) =>
+    {
+        let stores = await fetchStoreJson();
+        console.log(stores);
+
+        for (let store of stores.content) {
+            createTableEntry(store);
+        }
+    });
+
+    function createEntry(element, entry, key, qSelector) {
+
+        let child = document.createElement(element)
+        child.innerHTML = entry.content[0][key]
+        child.style.color = 'azure'
+        parent = document.querySelector(qSelector)
+        parent.appendChild(child)
+    }
+
+    document.addEventListener('DOMContentLoaded', async (event) => 
+    {
+        let item = await fetchItemByName("TELATE Apfelsaft [500 ML]")
+        createEntry('p', item, 'name', 'body')
+    })
+    
+</script>
+</html>

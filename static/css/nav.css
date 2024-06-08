@@ -1,0 +1,210 @@
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100px;
+    z-index: 1000;
+    background-color: var(--primary);
+    transition: ease-in-out 0.25s;
+    overflow-y: scroll;
+}
+
+.nav-button {
+    display: none;
+}
+
+nav ul {
+    list-style: none;
+    padding: 25px;
+}
+
+nav ul li:nth-child(1) {
+    margin-bottom: 50px;
+    transition-duration: 0.5s;
+}
+
+nav ul li:nth-child(1):hover {
+    transform: scale(1.1);
+
+}
+
+nav ul li a {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    margin-bottom: 25px;
+    height: 50px;
+    overflow: hidden;
+    font-size: 1.25rem;
+
+}
+
+nav ul li p {
+    display: none;
+    opacity: 0;
+    margin: 15px 0 0 0;
+    transition-duration: 0.5s;
+}
+
+nav ul li:hover p {
+    margin-left: 10px;
+}
+
+nav ul li img {
+    width: 50px;
+    height: 50px;
+}
+
+.nav-logo {
+    height: 40px;
+    width: 50px;
+    display: block;
+    margin: 0 auto;
+    z-index: 1500;
+    overflow-x: visible;
+}
+
+#logo-link {
+    display: flex;
+    overflow: visible;
+}
+
+#arrow-icon {
+    position: absolute;
+    bottom: 25px;
+    width: 25px;
+    left: 36.5px;
+    transition-duration: 0.3s;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* burger menu */ 
+
+.burger-menu {
+    width: 25px;
+    height: 25px;
+    margin: 12.5px auto;
+    position: relative;
+}
+
+.bmDiv {
+    width: 100%;
+    height: 5px;
+    background-color: white;
+    transition-duration: 1s;
+}
+
+#bm1 {
+    position: absolute;
+    top: 0;
+}
+
+#bm2 {
+    position: absolute;
+    top: 10px;
+    width: 75%;
+}
+
+#bm3 {
+    position: absolute;
+    bottom: 0;
+}
+
+div .nav-p,
+.nav-hr {
+    display: none;
+    margin-top: 10px;
+}
+
+#user-div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 10px;
+    overflow: hidden;
+    font-size: 1.25rem;
+    width: 90%;
+}
+
+#user-div a {
+    margin-left: 20px;
+}
+
+.user-title {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#user-pic {
+    width: 60px;
+    margin-left: 20px;
+}
+
+.nav-hr {
+    border: 0;
+    height: 1px;
+    background-color: #FFF;
+    width: 100%;
+    margin: 15px 10px;
+}
+
+@media screen and (min-width: 601px) {
+    nav:hover {
+        width: 250px;
+    }
+    
+    nav:hover .nav-p, nav:hover .nav-hr{
+        display: block;
+        animation-name: appear;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+    }
+    
+    nav:hover #arrow-icon {
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    nav {
+        width: 100%;
+        left: -100%;
+    }
+
+    .nav-button {
+
+        display: block;
+        position: fixed;
+        bottom: 0;
+        width: 20%;
+        height: 50px;
+        border-radius: 5px 5px 0 0;
+        border: 1px solid white;
+        background-color: var(--primary);
+        z-index: 1001;
+    }
+
+    #arrow-icon {
+        display: none;
+    }
+
+    div .nav-p {
+        display: block;
+        opacity: 1;
+    }
+    #user-div {
+        margin-left: 5px;
+    }
+}

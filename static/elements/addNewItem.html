@@ -1,0 +1,46 @@
+<a href="#" id="addNewItemButton">
+    <p>Add new Item</p>
+    <img src="img/plus.circle.fill.svg" alt="+">
+</a>
+
+<dialog id="addNewItemWrapper">
+    <div id="addNewItemBlur">
+    </div>
+    <div id="addNewItemDialog">
+        <div id="closeNewItemButton">
+            <img src="img/xmark.circle.fill.svg" alt="x">
+        </div>
+        <div id="addNewItemForm">
+            <label for="kassenbon">Kassenbon: </label>
+            <select name="kassenbon" id="kassenbon-dropdown">
+                <!-- <option value="...">...</option> -->
+            </select>
+            <br>
+            <label for="store">Store: </label>
+            <select name="store" id="store-dropdown">
+                <!-- <option value="lidl">Lidl</option> -->
+                <!-- <option value="aldi">Aldi</option> -->
+            </select>
+            <br>
+            <label for="item">Item: </label>
+            <select name="item" id="item-dropdown">
+                <!-- <option value="lidl">Lidl</option> -->
+                <!-- <option value="aldi">Aldi</option> -->
+            </select>
+            <br>
+            <label for="amount">Amount: </label>
+            <input type="number" id="amount" name="amount" value="" placeholder="1">
+            <br>
+            <label for="price">Price: </label>
+            <input type="number" id="price" name="price" value="" placeholder="12.34€">
+            <br>
+            <label for="special">Special? </label>
+            <input type="checkbox" id="special" name="special" value="special">
+            <br>
+            <label for="sold-out">Sold Out? </label>
+            <input type="checkbox" id="sold-out" name="sold-out" value="sold-out">
+            <br>
+            <button id="submitRecieptButton">&rarr; Submit</button>
+        </div>
+    </div>
+</dialog>

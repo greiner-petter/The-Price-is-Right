@@ -1,0 +1,313 @@
+.overview h2 {
+    text-align: center;
+    margin-bottom: 50px !important;
+}
+
+.overview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    height: 100vh;
+}
+
+.overview-inner {
+    display: grid;
+    grid-gap: 25px;
+    grid-template-columns: 300px 300px 300px;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 100px;
+}
+
+.overview-card {
+    background: var(--primary);
+    width: 300px;
+    height: 300px;
+    border-radius: 14px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.overview-card-container {
+    
+    height: 100%;
+    padding: 0;
+    background-position: center;
+    background-size: cover;
+    color: var(--text);
+
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.2s ease;
+}
+
+.overview-card-container {
+    background-image: url("../img/rice.jpg");
+}
+
+.overview-card-container.deos {
+    background-image: url("../img/deo.jpg");
+}
+
+.overview-card-container.pflegeprodukte {
+    background-image: url("../img/creme-products.jpg");
+}
+
+.overview-card-container.waschmittel {
+    background-image: url("../img/waschmittel.jpg");
+}
+
+.overview-card-container.medizinprodukte {
+    background-image: url("../img/medi.jpg");
+}
+
+.overview-card-container.zahnpflege {
+    background-image: url("../img/zahn.jpg");
+}
+
+.overview-card-container.getraenke-und-muesli {
+    background-image: url("../img/muesli.jpg");
+}
+
+.overview-card-container.babynahrung-und-pflege {
+    background-image: url("../img/babynahrung.jpg");
+}
+
+.overview-card-container.haarpflege {
+    background-image: url("../img/shampoo.jpg");
+}
+
+.overview-card-container.rasierzeug {
+    background-image: url("../img/rasierer.jpg");
+}
+
+.overview-card-container.snacks {
+    background-image: url("../img/snacks.jpg");
+}
+
+.overview-card-container.parfum {
+    background-image: url("../img/parfum.jpg");
+}
+
+.overview-card-container.store {
+    background-image: url("../img/shop.jpg");
+}
+
+.overview-card-container.company {
+    background-image: url("../img/company.jpg");
+}
+
+.overview-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+    position: relative;
+    z-index: 950;
+    
+}
+
+.overview-card-text {
+    height: 100%;
+    margin-top: 50%;
+    padding: 25px 15px 0 25px;
+    background-color: rgba(40, 40, 40, 1);
+    border-radius: 12px;
+    transition-duration: 1s;
+    position: relative;
+}
+
+.overview-card-text h4 {
+    font-size: 1.5rem;
+    padding: 0;
+    margin: 0;
+    margin-right: 25px;
+}
+
+.overview-card-text p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.overview-card:hover .overview-card-container {
+    border-radius: 14px;
+    transform: scale(0.98);
+}
+
+.overview-card:hover .overview-card-text {
+    backdrop-filter: blur(10px);
+    background-color: rgba(40, 40, 40, 0.8);
+    margin-top: 0;
+}
+
+.overview-card-p {
+    position: absolute;
+    top: 200px;
+}
+
+.more-cards {
+    background-color: var(--primary);
+    border: none;
+    height: 300px;
+    color: var(--text);
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.overview-filter {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 15px;
+    width: fit-content;
+    margin-bottom: 50px;
+}
+.overview-filter p {
+    display: inline;
+    margin-right: 15px;
+}
+
+/* .overview-filter select is now part of global styles */ 
+
+.overview-option {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 15px;
+    align-items: center;
+}
+
+.contact {
+    position: relative;
+    top: 10%;
+    font-weight: bold;
+}
+
+.subAdderss {
+    position: relative;
+    top: 25%;
+}
+
+#search-Overview {
+    position: relative;
+    transition: all 1s;
+    width: 300px;
+    height: 50px;
+    background: white;
+    box-sizing: border-box;
+    border-radius: 25px;
+    border: 4px solid white;
+    padding: 5px;
+}
+
+#search-input-Overview {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;;
+    height: 42.5px;
+    line-height: 30px;
+    outline: 0;
+    border: 0;
+    display: block;
+    font-size: 1em;
+    border-radius: 20px;
+    padding: 0 20px;
+}
+
+#search-img-Overview {
+    box-sizing: border-box;
+    padding: 10px;
+    width: 42.5px;
+    height: 42.5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 1.2em;
+    transition: all 1s;
+    background: var(--primary);
+    cursor: pointer;
+}
+
+#search-img-Overview img {
+    padding: 0;
+    top: 25%;
+    transition: all 0.3s;
+    filter: invert();
+}
+
+#search-trash-Overview {
+    position: absolute;
+    left: 110%;
+    top: 25%;
+    cursor: pointer;
+}
+
+/* info dialog */
+
+#infoWrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: transparent;
+    border: none;
+}
+#infoBlur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    background-color: rgba(20, 20, 20, 0.8);
+}
+#infoDialog {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 350px;
+    width: 70vw;
+    padding: 25px;
+    background-color: var(--primary);
+    border-radius: 16px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    color: var(--text);
+}
+
+#infoDialog p {
+    margin: 15px 0;
+}
+
+#closeinfoButton {
+    align-self: end;
+    height: fit-content;
+    width: fit-content;
+    cursor: pointer;
+}
+
+#infoText h4 {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+}
+
+
+@media screen and (max-width: 1200px){
+    .overview-inner {
+        grid-template-columns: 300px 300px;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .overview-inner {
+        grid-template-columns: 300px;
+    }
+}

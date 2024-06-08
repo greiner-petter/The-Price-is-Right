@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url("theme.css");
+@import url("nav.css");
+@import url("data.css");
+@import url("addNewItem.css");
+@import url("contentPages.css");
+@import url("index.css");
+@import url("upButton.css");
+@import url("custom-scrollbar.css");
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.main-html {
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+h2 {
+    margin: 100px 0;
+    font-size: 2rem;
+}
+
+body {
+    background-color: var(--background);
+    font-family: 'Roboto', sans-serif;
+    color: azure;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+select {
+    background-color: var(--secondary);
+    color: var(--text);
+    border: 1px solid var(--background);
+    margin: 6px;
+    padding: 10px;
+    border-radius: 12px;
+}
+
+select:hover {
+    cursor: pointer;
+    background-color: var(--primary);
+}
+
+input[type="number"] {
+    background-color: var(--secondary);
+    color: var(--text);
+    border: 1px solid var(--background);
+    margin: 6px;
+    padding: 10px;
+    border-radius: 12px;
+}
+
+input[type="number"]:hover {
+    cursor: pointer;
+    background-color: var(--primary);
+}
+
+input[type="checkbox"] {
+    accent-color: var(--secondary);
+    border: 1px solid var(--background);
+    border-radius: 4px;
+    margin: 6px;
+    padding: 10px;
+    width: 2em;
+    height: 2rem;
+}
+
+input[type="checkbox"]:hover {
+    cursor: pointer;
+    accent-color: var(--primary);
+}

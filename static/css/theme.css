@@ -1,0 +1,8 @@
+/* variables for the theme colors */
+:root {
+    --primary: #588157;
+    --secondary: #3A5A40;
+    --accent: #805781;
+    --text: white;
+    --background: rgb(30,30,30);
+}

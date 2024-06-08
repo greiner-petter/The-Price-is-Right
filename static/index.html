@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" class="main-html">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+
+    <title>The Price Is Right</title>
+    <script src="js/api.js"></script>
+</head>
+
+<body>
+    <header>
+        <div id="nav-container">
+            <!-- Zum Bearbeiten nav.html benutzen -->
+        </div>
+    </header>
+    <div class="container">
+        <section id="one" class="section-snap">
+            <h1 id="title">The Price is Right</h1>
+            <h1>Find out about the <span id="typingEffectSpan"></span></h1>
+            <form id="search" action="" onsubmit="return false">
+                <input id="search-input" type="search" placeholder="Search here ...">
+                <i id="search-img">
+                    <img src="img/magnifyingglass.svg" alt="search">
+                </i>
+            </form>
+            <video autoplay playsinline muted loop src="mp4/header-video.mp4"></video>
+            <p id="arrow-down">&#8595;</p>
+        </section>
+        <section id="two" class="favorite section-snap">
+            <h2>Schau dir die letzten Einträge unserer Nutzer an.</h2>
+            <div class="favorite-inner" id="favInner">
+            </div>
+        </section>
+        <section id="three" class="section-snap">
+            <div class="overview-info">
+                <a href="items.html"><div class="overview-info-element">
+                    <div class="cover">
+                        <img src="img/items.jpg">
+                        <p>Items</p>
+                    </div>
+                    <div class="info-element-text">
+                        <h3>Items</h3>
+                        <p>Find out about the new items in the stores' range.</p>
+                    </div>
+                </div></a>
+                <a href="stores.html"><div class="overview-info-element">
+                    <div class="cover">
+                        <img src="img/shop.jpg">
+                        <p>Stores</p>
+                    </div>
+                    <div class="info-element-text">
+                        <h3>Stores</h3>
+                        <p>Get an overview in which stores items are recorded.</p>
+                    </div>
+                </div></a>
+                <a href="products.html"><div class="overview-info-element">
+                    <div class="cover">
+                        <img src="img/products.jpg">
+                        <p>Products</p>
+                    </div>
+                    <div class="info-element-text">
+                        <h3>Products</h3>
+                        <p>Here you can see the categories according to which our products are sorted.</p>
+                    </div>
+                </div></a>
+                <a href="companies.html"><div class="overview-info-element">
+                    <div class="cover">
+                        <img src="img/company.jpg">
+                        <p>Companies</p>
+                    </div>
+                    <div class="info-element-text">
+                        <h3>Companies</h3>
+                        <p>Get an overview of which stores belong to which companies.</p>
+                    </div>
+                </div></a>
+                
+            </div>
+        </section>
+    </div>
+    <div id="newItemContainer">
+        <!-- Zum Bearbeiten addNewItem.html benutzen -->
+    </div>
+    <script src="js/index.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/addNewItem.js"></script>
+</body>
+
+</html>
